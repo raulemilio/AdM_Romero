@@ -98,7 +98,7 @@ En estado de debug se utiliza únicamente para operaciones de depuración. A est
 ![](images/pregunta6.png)
 
 ## Pregunta 7
-### ¿Qué se entiende por modelo de registros ortogonal? Dé un ejemplo
+### ¿Qué se entiende por modelo de registros ortogonal? Dé un ejemplo.
 
 El término "modelo de registros ortogonal" se refiere a que los registros se pueden utilizar de manera intercambiable para realizar una amplia variedad de operaciones sin restricciones en función de su tipo. Esto significa que, en un modelo ortogonal, los registros no tienen restricciones rígidas en cuanto a su uso en operaciones específicas, lo que proporciona una flexibilidad significativa para los programadores.
 
