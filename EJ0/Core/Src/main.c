@@ -90,12 +90,18 @@ int main(void)
 
   /* USER CODE END 2 */
 
-  uint32_t vectorIn[] = {2,3,4,5,6};
+  int32_t vectorIn[] = {2,3,4,5,6};
   uint32_t longitud=sizeof(vectorIn)/sizeof(vectorIn[0]);
   uint32_t vectorOut[]={0,0,0,0,0};
   uint32_t ciclos_c=0;
   uint32_t ciclos_asm=0;
   uint32_t escalar=2;
+
+  //uint32_t vectorIn[] = {1,1,1,1,1};
+  int32_t vectorEco[] = {0,0,0,0,0};
+  uint32_t eco=2;
+  //uint32_t longitud=sizeof(vectorIn)/sizeof(vectorIn[0]);
+
 
   // Ejecutar por cada función:
   DWT->CYCCNT = 0;
@@ -109,7 +115,7 @@ int main(void)
   // Obtiene cantidad de ciclos que demoró la función
   ciclos_asm = DWT->CYCCNT;
 
-
+  asm_eco(vectorIn,vectorEco,longitud,eco);
   /* Infinite loop */
   /* USER CODE BEGIN WHILE */
 
