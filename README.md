@@ -22,7 +22,7 @@ La diferencia principal entre las familias M0 y M3/M4 es que los primeros están
 
 Como se muestra en la figura 1 Los microcontroladores de la familia M0 no incluyen el timer Systick (utiliado habitualmente en sistemas operativos) en cambio los M3, M4 y M7 si lo incluye. Otro aspecto es que los M0 no incluyen Protección de memoria (MPU) en cambio los M0+ en adelante tienen la opción. Con respecto a la arquitecura de datos y memeoria los M0 tienen una arquitecura Von NEumann comparado con la Harvard de los M3 en adelante. La arquitectura Harvard tien la ventaja que los datos y las instrucciones van en un único bus de datos lo reduce el tiempo de ejecución de los programas. Por último Los Cortex M3 en adelante disponen la arquitecrua ARM mas actualizada (ARMv7).
 
-![Conexión eléctrica](images/pregunta1.jpg)
+![Conexión eléctrica](images/pregunta1.png)
 
 Por otro lado respecto al set de instrucciones de las familias, la M0 es la que cuenta con un set reducido destinado a proseamiento general de datos. La familia M3 incorpora instrucciones para la manipulación de bit y la famila M4 cuenta con la capacidad para procesamiento DSP y trabajar con números en coma flotante.
 Los M3/M4 cuentan con una arquitectura de 32 bits tanto para registro como para los buses de datos y pipeline de 3 estapas (fetch, decode y execute).
@@ -53,7 +53,7 @@ Los procesadores Cortex-M3 y Cortex-M4 tienen un pipeline de tres etapas (búsqu
 El sistema de memoria de los procesadores ARM Cortex-M utiliza direccionamiento de 32 bits, lo que permite un espacio de direcciones máximo de 4 GB. El mapa de memoria está unificado, lo que significa que aunque puede haber múltiples interfaces de bus, solo hay una memoria de 4GB.
 espacio de memoria. El espacio de memoria es utilizado por el código del programa, los datos, los periféricos, y algunos de los componentes de soporte de depuración dentro de los procesadores.
 
-![Conexión eléctrica](images/pregunta4.jpg)
+![Conexión eléctrica](images/pregunta4.png)
 
 Si bien es posible almacenar y ejecutar código de programa en SRAM y RAM regiones, el diseño del procesador no está optimizado para dicha operación y requiere uno ciclo de reloj adicional por instrucción para cada búsqueda de instrucción. Como resultado, el desempeño
 El rendimiento es ligeramente más lento cuando se ejecutan códigos de programa a través del bus del sistema. La ejecución del programa desde las regiones de memoria de Periféricos, Dispositivos y Sistema no está permitida. El espacio de memoria para NVIC, MPU, SCB y varios periféricos del sistema es llamado Espacio de control del sistema (SCS)
@@ -97,7 +97,7 @@ El modelo no está disponible en el procesador Cortex-M0, pero es opcional en el
 Procesador M0þ. 
 En estado de debug se utiliza únicamente para operaciones de depuración. A este estado se accede mediante un detener la solicitud del depurador o mediante eventos de depuración generados a partir de componentes de depuración en el procesador. Este estado permite al debugger acceder o cambiar el registro del procesador.
 
-![Conexión eléctrica](images/pregunta6.jpg)
+![Conexión eléctrica](images/pregunta6.png)
 
 ## Pregunta 7
 ¿Qué se entiende por modelo de registros ortogonal? Dé un ejemplo
@@ -165,7 +165,7 @@ La duración del Power on reset o del System reset depende del diseño deñ micr
 
 Después del reset y antes de que el procesador comience a ejecutar el programa, el Cortex-M lee las dos primeras words de la memoria. El comienzo de el espacio de memoria contiene el vector table y las dos primeras palabras de la tabla de vectores son el valor inicial para el Main Stack Pointer (MSP) y el vector de reset. Después de que el procesador lea estas dos palabras, el procesador configura el MSP y el Program Counter (PC) con estos valores. La configuración del MSP es necesaria porque algunas excepciones como el NMI o el handler HardFault podría ocurrir poco después del reinicio y el stack necesitará el MSP hacer un PUSH del estado del procesador antes del manejo de excepciones.
 
-![Conexión eléctrica](images/pregunta11.jpg)
+![Conexión eléctrica](images/pregunta11.png)
 
 ## Pregunta 12
 ¿Qué entiende por “core peripherals”? ¿Qué diferencia existe entre estos y el resto de los periféricos?
